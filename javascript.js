@@ -4,4 +4,13 @@ function getComputerChoice() {
     return options[randomIndex];
 }
 
-console.log(getComputerChoice() )
+function getHumanChoice() {
+    const validChoices = ['rock', 'paper', 'scissors'];
+    let userChoice = prompt('Enter your choice (rock, paper, or scissors):').toLowerCase();
+    
+    while (!validChoices.includes(userChoice)) {
+    userChoice = prompt('Invalid choice. Please enter rock, paper, or scissors:').toLowerCase();
+  }
+return userChoice;
+}
+console.log(getHumanChoice() )
