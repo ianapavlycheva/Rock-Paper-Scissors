@@ -56,6 +56,7 @@ function checkWinner() {
     document.getElementById("final-result").textContent =
       "Computer wins the game!";
     disableButtons();
+    showPlayAgainButton();
   }
 }
 
@@ -72,4 +73,28 @@ function handleClick(humanChoice) {
   document.getElementById("result").textContent = result;
   updateScore();
   checkWinner();
+}
+
+function showPlayAgainButton() {
+  document.getElementById("play-again").style.display = "inline-block";
+}
+
+document.getElementById("play-again").addEventListener("click", resetGame);
+
+function resetGame() {
+  humanScore = 0;
+  computerScore = 0;
+  updateScore();
+
+  document.getElementById("result").textContent = "";
+  document.getElementById("final-result").textContent = "";
+
+  enableButtons();
+  document.getElementById("play-again").style.display = "none";
+}
+
+function enableButtons() {
+  document.getElementById("rock").disabled = false;
+  document.getElementById("paper").disabled = false;
+  document.getElementById("scissors").disabled = false;
 }
