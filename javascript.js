@@ -27,7 +27,7 @@ function playRound(humanChoice, computerChoice) {
   const computerChoiceCapitalized = capitalize(computerChoice);
 
   if (humanChoice === computerChoice) {
-    return "It's a tie! No points.";
+    return "It's a tie! No points";
   }
   if (
     (humanChoice === "rock" && computerChoice === "scissors") ||
