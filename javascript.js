@@ -52,6 +52,7 @@ function checkWinner() {
     document.getElementById("final-result").textContent =
       "Human wins the game!";
     disableButtons();
+    showPlayAgainButton();
   } else if (computerScore === 5) {
     document.getElementById("final-result").textContent =
       "Computer wins the game!";
